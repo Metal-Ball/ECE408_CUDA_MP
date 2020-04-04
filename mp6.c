@@ -58,7 +58,6 @@ void histo(unsigned char *img, unsigned int *histogram, int length){
 
   // contribute to global histogram 
   if(tx < HIST_LEN) atomicAdd(&(histogram[tx]), buffer[tx]);
-  __syncthreads();
 }
 
 __global__ 
